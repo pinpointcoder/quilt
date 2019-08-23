@@ -5,7 +5,7 @@ inherit_from:
   - http://shopify.github.io/ruby-style-guide/rubocop.yml
 
 AllCops:
-  TargetRubyVersion: 2.3.7
+  TargetRubyVersion: 2.6.3
   Exclude:
     - 'node_modules/**/*'
     - 'test/**/node_modules/**/*'
@@ -20,6 +20,8 @@ Metrics/PerceivedComplexity:
 
 CyclomaticComplexity:
   Max: 6
+  Exclude:
+    - bin/**/*
 
 Metrics/ModuleLength:
   CountComments: true
@@ -68,4 +70,20 @@ Metrics/LineLength:
     - Guardfile
     - Gemfile
     - config/**/*
+    - bin/**/*
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - bin/**/*
+
+Style/MethodCallWithArgsParentheses:
+  Exclude:
+    - bin/**/*
+
+Style/PerlBackrefs:
+  Exclude:
+    - bin/**/*
+
+Style/SpecialGlobalVars:
+  Exclude:
     - bin/**/*
