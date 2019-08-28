@@ -145,7 +145,7 @@ function runBuild(configPath: string): Promise<any[]> {
       configPath,
     );
 
-    // eslint-disable-next-line typescript/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const config = require(`${pathFromRoot}/webpack.config.js`);
     const contextConfig = Array.isArray(config)
       ? config.map(config => ({
@@ -158,7 +158,7 @@ function runBuild(configPath: string): Promise<any[]> {
         };
 
     // We use MemoryOutputFileSystem to prevent webpack from outputting to our actual FS
-    // eslint-disable-next-line typescript/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const MemoryOutputFileSystem = require('webpack/lib/MemoryOutputFileSystem');
 
     const compiler: Compiler = webpack(contextConfig);
