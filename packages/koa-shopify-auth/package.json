@@ -1,14 +1,10 @@
 {
-  "name": "@shopify/koa-shopify-auth",
-  "version": "3.1.40",
+  "name": "@pinpoint/koa-shopify-auth",
+  "version": "1.0.0-beta1",
   "license": "MIT",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public",
-    "@shopify:registry": "https://registry.npmjs.org"
-  },
   "scripts": {
     "build": "tsc --p tsconfig.build.json",
     "prepublishOnly": "yarn run build"
@@ -37,5 +33,8 @@
     "@types/safe-compare": "^1.1.0",
     "koa": "^2.5.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "peerDependencies": {
+    "@shopify/network": "^1.4.2"
+  }
 }
